@@ -1,0 +1,138 @@
+/* this attribution makes all elements count padding and margin as part of the total width of themselves*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    color: white;
+}
+
+.game-info-container {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+}
+
+.cards-container {
+    width: 550px;
+    height: 750px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.card {
+    height: 175px;
+    width: 125px;
+    position: relative;   
+    border-radius: 0.2em; 
+    overflow: hidden;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.01em;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    
+
+    background:
+    -webkit-linear-gradient(135deg, hsla(18.11, 100%, 48.34%, 1) 15%, hsla(18.11, 100%, 48.34%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(267.17, 98.64%, 40.19%, 1) 100%, hsla(267.17, 98.64%, 40.19%, 0) 70%);
+    background:
+    linear-gradient(315deg, hsla(18.11, 100%, 48.34%, 1) 15%, hsla(18.11, 100%, 48.34%, 0) 80%),
+    linear-gradient(245deg, hsla(267.17, 98.64%, 40.19%, 1) 100%, hsla(267.17, 98.64%, 40.19%, 0) 70%);
+}
+
+.web-cob {
+    position: absolute;    
+    width: 25px;    
+}
+
+.top-left {
+    top: 2px;
+    left: 2px;
+    transform: rotate(315deg);
+}
+
+.top-right {
+    top: 2px;
+    right: 2px;
+    transform: rotate(45deg);
+}
+
+.bottom-left {
+    bottom: 2px;
+    left: 2px;
+    transform: rotate(225deg);
+}
+
+.bottom-right {
+    bottom: 2px;
+    right: 2px;
+    transform: rotate(135deg);
+}
+
+.coffin {
+    width: 70px;
+}
+
+.card:hover {
+    z-index: 1;
+    transform: scale(1.04);
+    transition-property: scale;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;    
+}
+
+.card:hover .coffin{    
+    transform: rotate(360deg);
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.card:hover .web-cob {    
+    width: 31px;
+    height: auto;
+    transition-property: width, height;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.test {
+    height: 175px;
+    width: 125px;
+    position: relative;   
+    border-radius: 0.2em; 
+    overflow: hidden;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.01em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+    background:
+    -webkit-linear-gradient(38deg, hsla(29.43, 95.15%, 46.8%, 1) 0%, hsla(29.43, 95.15%, 46.8%, 0) 65%),
+    -webkit-linear-gradient(65deg, hsla(54.34, 89.99%, 50%, 1) 10%, hsla(54.34, 89.99%, 50%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(303.4, 95%, 50%, 1) 15%, hsla(303.4, 95%, 50%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(267.17, 100%, 55%, 1) 100%, hsla(267.17, 100%, 55%, 0) 70%);
+    background:
+    linear-gradient(52deg, hsla(29.43, 95.15%, 46.8%, 1) 0%, hsla(29.43, 95.15%, 46.8%, 0) 65%),
+    linear-gradient(25deg, hsla(54.34, 89.99%, 50%, 1) 10%, hsla(54.34, 89.99%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(303.4, 95%, 50%, 1) 15%, hsla(303.4, 95%, 50%, 0) 80%),
+    linear-gradient(245deg, hsla(267.17, 100%, 55%, 1) 100%, hsla(267.17, 100%, 55%, 0) 70%);
+}
+
+.center-item {    
+    width: 70px;
+    height: auto;    
+}
+
