@@ -50,6 +50,7 @@ body {
 }
 
 .card-back {    
+    transform: rotateY(0deg);
     background:
     -webkit-linear-gradient(135deg, hsla(18.11, 100%, 48.34%, 1) 15%, hsla(18.11, 100%, 48.34%, 0) 80%),
     -webkit-linear-gradient(205deg, hsla(267.17, 98.64%, 40.19%, 1) 100%, hsla(267.17, 98.64%, 40.19%, 0) 70%);
@@ -71,7 +72,6 @@ body {
     linear-gradient(315deg, hsla(303.4, 95%, 50%, 1) 15%, hsla(303.4, 95%, 50%, 0) 80%),
     linear-gradient(245deg, hsla(267.17, 100%, 55%, 1) 100%, hsla(267.17, 100%, 55%, 0) 70%);    
 }
-
 
 .web-cob {
     position: absolute;    
@@ -127,6 +127,15 @@ body {
     transition-property: width, height;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
+}
+
+
+.visible.card-back {
+    transform: rotateY(90deg);
+}
+
+.visible.card-front {
+    transform: rotateY(0deg);
 }
 
 
