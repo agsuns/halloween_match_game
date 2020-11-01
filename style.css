@@ -1,10 +1,27 @@
+@font-face {
+    font-family: "halloween";
+    src: url("./assets/fonts/clawman.otf")
+}
+
 /* this attribution makes all elements count padding and margin as part of the total width of themselves*/
 * {
     box-sizing: border-box;
 }
 
-body {
-    background-color: black;
+.page-title {
+    font-family: "halloween";
+    font-weight: 100;
+    font-size: 5em;
+}
+
+.game-info {
+    font-family: "halloween";
+    font-weight: 100;
+    font-size: 2em;
+}
+
+body {    
+    background: radial-gradient(#9F2074, black);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,26 +48,27 @@ body {
 .card {
     height: 175px;
     width: 125px;
-    position: relative;       
-    border-radius: 0.2em; 
-    overflow: hidden;
-    border-style: solid;
-    border-color: black;
-    border-width: 0.01em;        
+    position: relative;        
 }
 
 .card-face {
     position: absolute;    
+    overflow: hidden;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
+    border-radius: 0.2em; 
+    border-style: solid;
+    border-color: black;
+    border-width: 0.01em;
+    transition: transform 300ms ease-in-out;
 }
 
 .card-back {    
-    transform: rotateY(0deg);
+    transform: rotateY(0);
     background:
     -webkit-linear-gradient(135deg, hsla(18.11, 100%, 48.34%, 1) 15%, hsla(18.11, 100%, 48.34%, 0) 80%),
     -webkit-linear-gradient(205deg, hsla(267.17, 98.64%, 40.19%, 1) 100%, hsla(267.17, 98.64%, 40.19%, 0) 70%);
@@ -60,7 +78,7 @@ body {
 }
 
 .card-front {
-    transform: rotateY(90deg);    
+    transform: rotateY(180deg);    
     background:
     -webkit-linear-gradient(38deg, hsla(29.43, 95.15%, 46.8%, 1) 0%, hsla(29.43, 95.15%, 46.8%, 0) 65%),
     -webkit-linear-gradient(65deg, hsla(54.34, 89.99%, 50%, 1) 10%, hsla(54.34, 89.99%, 50%, 0) 80%),
@@ -103,7 +121,7 @@ body {
 }
 
 .center-img {    
-    width: 70px;    
+    width: 70px;        
 }
 
 .card:hover {
@@ -114,8 +132,15 @@ body {
     transition-timing-function: ease-in-out;    
 }
 
-.card:hover .center-img{    
+.card-back:hover .center-img{    
     transform: rotate(360deg);
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.card-front:hover .center-img{
+    transform: scale(1.1);
     transition-property: transform;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
@@ -130,12 +155,14 @@ body {
 }
 
 
+
 .visible.card-back {
-    transform: rotateY(90deg);
+    transform:rotateY(-180deg);
 }
 
 .visible.card-front {
     transform: rotateY(0deg);
 }
+
 
 
