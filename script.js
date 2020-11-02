@@ -6,7 +6,7 @@ class AudioControler {
         this.victorySound = new Audio("./assets/audios/victory.wav");
         this.gameOverSound = new Audio("./assets/audios/gameOver.wav");
         
-        this.bgMusic.volume = 0.6;
+        this.bgMusic.volume = 0.2;
         this.bgMusic.loop = true;        
     }
 
