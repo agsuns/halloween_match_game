@@ -3,6 +3,11 @@
     src: url("./assets/fonts/clawman.otf")
 }
 
+@font-face {
+    font-family: "alt-halloween";
+    src: url("./assets/fonts/Lunacy.woff");
+}
+
 html {
     cursor: url("./assets/cursors/halloween-cursor.ani"), auto;
 }
@@ -15,13 +20,13 @@ html {
 .page-title {
     font-family: "halloween";
     font-weight: 100;
-    font-size: 5em;
+    font-size: 6em;
 }
 
 .game-info {
-    font-family: "halloween";
-    font-weight: 100;
-    font-size: 2em;
+    font-family: "alt-halloween";
+    font-weight: lighter;
+    font-size: 3em;
 }
 
 body {    
@@ -82,7 +87,7 @@ body {
 
 .card-face {
     position: absolute;    
-    overflow: hidden;
+    
     width: 100%;
     height: 100%;
     display: flex;
@@ -93,7 +98,7 @@ body {
     border-style: solid;
     border-color: black;
     border-width: 0.01em;
-    transition: transform 300ms ease-in-out;
+    transition: transform 500ms ease-in-out;
 }
 
 .card-back {    
@@ -107,7 +112,7 @@ body {
 }
 
 .card-front {
-    transform: rotateY(180deg);    
+    transform: rotateY(-180deg);    
     background:
     -webkit-linear-gradient(38deg, hsla(29.43, 95.15%, 46.8%, 1) 0%, hsla(29.43, 95.15%, 46.8%, 0) 65%),
     -webkit-linear-gradient(65deg, hsla(54.34, 89.99%, 50%, 1) 10%, hsla(54.34, 89.99%, 50%, 0) 80%),
