@@ -225,3 +225,14 @@ body {
 }
 
 
+@media (max-width: 600px) {
+    .cards-container {
+        width: 300px;
+        height: auto;
+        display: flex;
+        align-content: space-between;
+        gap: 10px;
+    }
+}
+
+
